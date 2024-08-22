@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1" cellpadding="15px" style="font-size: 25px; margin: 0px auto;">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>User Name</th>
+          <th>User Password</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script>
+      let arr = JSON.parse(localStorage.getItem("userData"));
+
+      arr.map((val, indexedDB) => {
+        document.getElementById("tbody").innerHTML += `
+         <tr>
+             <td>${val.Id}</td>
+             <td>${val.Name}</td>
+             <td>${val.Password}</td>
+             <td>
+                <button>Update</button>
+                <button>Delete</button>
+            </td>
+         </tr>
+         `;
+      });
+    // location.reload();
+
+    </script>
+  </body>
+</html>
