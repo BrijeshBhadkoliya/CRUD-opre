@@ -351,19 +351,22 @@
           document.getElementById("password").value = "";
           document.getElementById("Conpassword").value = "";
         }
+ 
+        arr.localStorage.clear();
       }
 
-      //   function showHidePassword(element) {
-      //     const passwordInput = document.getElementById("password-input");
-      //     if (passwordInput.type === "password") {
-      //       passwordInput.type = "text";
-      //       element.classList.add("view");
-      //     } else {
-      //       passwordInput.type = "password";
-      //       element.classList.remove("view");
-      //     }
-      //     return false;
-      //   }
+        function showHidePassword(element) {
+          const passwordInput = document.getElementById("password-input");
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            element.classList.add("view");
+          } else {
+            passwordInput.type = "password";
+            element.classList.remove("view");
+          }
+          return false;
+        }
+  
     </script>
   </body>
 </html>
